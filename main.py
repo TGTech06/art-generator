@@ -55,7 +55,6 @@ def generate(prompt, quality, aspect):
 
 
 # Create the UI with streamlit
-import streamlit as st
 st.write('# Art Generator')
 st.write('## Hi I am an artistic AI 👋🏻 ')
 st.markdown("## Text Prompt:")
