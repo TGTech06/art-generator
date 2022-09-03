@@ -11,11 +11,10 @@ regex
 tqdm 
 omegaconf 
 pytorch-lightning
-gradio
 streamlit
 torch
 torchvision
 torchtext
 imageio
 scipy
-
+vqgan
