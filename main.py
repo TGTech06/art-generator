@@ -5,10 +5,10 @@ import sys
 
 #clone https://github.com/openai/CLIP
 os.system("git clone https://github.com/openai/CLIP")
-# os.system("git clone https://github.com/CompVis/taming-transformers.git")
+os.system("git clone https://github.com/CompVis/taming-transformers.git")
 # !pip install taming-transformers
 #clone https://github.com/CompVis/taming-transformers.git
-os.system("git clone https://github.com/dribnet/pixray")
+# os.system("git clone https://github.com/dribnet/pixray")
 try:
     os.mkdir("steps")
     os.mkdir("models")
