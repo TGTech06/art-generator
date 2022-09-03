@@ -12,6 +12,7 @@ os.system("git clone https://github.com/dribnet/pixray")
 try:
     os.mkdir("steps")
     os.mkdir("models")
+    os.mkdir("wget")
 except:
     print("Already exists")
     
