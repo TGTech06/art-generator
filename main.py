@@ -17,7 +17,7 @@ except:
     
 import streamlit as st
 import torch
-# sys.path.append("pixray")
+sys.path.append("pixray")
 import pixray
 
 
