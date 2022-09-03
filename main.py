@@ -22,26 +22,26 @@ import pixray
 
 
 
-# Define the main function
-def generate(prompt, quality, aspect):
-    torch.cuda.empty_cache()
-    pixray.reset_settings()
+# # Define the main function
+# def generate(prompt, quality, aspect):
+#     torch.cuda.empty_cache()
+#     pixray.reset_settings()
     
-    # use_pixeldraw = (style == 'pixel art')
-    # use_clipdraw = (style == 'painting')
-    pixray.add_settings(prompts=prompt,
-                        aspect=aspect,
-                        iterations=20,
-                        quality=quality,
-                        make_video=False)
+#     # use_pixeldraw = (style == 'pixel art')
+#     # use_clipdraw = (style == 'painting')
+#     pixray.add_settings(prompts=prompt,
+#                         aspect=aspect,
+#                         iterations=20,
+#                         quality=quality,
+#                         make_video=False)
   
-    settings = pixray.apply_settings()
-    pixray.do_init(settings)
-    st.write('## settings complete')
-    pixray.do_run(settings)
-    st.write('## running')
+#     settings = pixray.apply_settings()
+#     pixray.do_init(settings)
+#     st.write('## settings complete')
+#     pixray.do_run(settings)
+#     st.write('## running')
 
-    return 'output.png'
+#     return 'output.png'
 
 # # Create the UI with Gradio
 # prompt = gr.inputs.Textbox(default="Underwater city", label="Text Prompt")
@@ -67,8 +67,8 @@ if btnResult:
 
     with st.spinner('Drawing...'):
         st.write('## currently drawing!')
-        image = generate(prompt, quality, aspect)
+#         image = generate(prompt, quality, aspect)
         st.write('## Image drawn')
-        st.image(image)
+#         st.image(image)
         st.write('##  done!')
     st.write('## Should be done!')
