@@ -31,13 +31,15 @@ def generate(prompt, quality, aspect):
     # use_clipdraw = (style == 'painting')
     pixray.add_settings(prompts=prompt,
                         aspect=aspect,
-                        iterations=50,
+                        iterations=20,
                         quality=quality,
                         make_video=False)
   
     settings = pixray.apply_settings()
     pixray.do_init(settings)
+    st.write('## settings complete')
     pixray.do_run(settings)
+    st.write('## running')
 
     return 'output.png'
 
@@ -65,6 +67,9 @@ btnResult = st.button('Generate')
 if btnResult:
 
     with st.spinner('Drawing...'):
+        st.write('## currently drawing!')
         image = generate(prompt, quality, aspect)
+        st.write('## Image drawn')
         st.image(image)
+        st.write('##  done!')
     st.write('## Should be done!')
